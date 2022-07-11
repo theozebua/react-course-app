@@ -1,3 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Signika Negative', sans-serif;
+  }
+}
+
+@layer components {
+  .service-wrapper {
+    @apply flex flex-col items-center justify-center rounded-lg bg-white py-4 text-primary md:px-4;
+  }
+
+  .service-title {
+    @apply mb-2 text-center text-xl font-medium tracking-wider;
+  }
+
+  .service-text {
+    @apply text-center text-sm tracking-wide;
+  }
+}
