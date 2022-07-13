@@ -38,6 +38,9 @@ export default function Navbar() {
                   <a href='#prices'>Prices</a>
                 </li>
                 <li className='nav-link'>
+                  <a href='#testimonials'>Testimonials</a>
+                </li>
+                <li className='nav-link'>
                   <a href='#contact'>Contact</a>
                 </li>
               </ul>
