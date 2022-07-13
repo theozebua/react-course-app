@@ -9,11 +9,27 @@
     font-family: 'Signika Negative', sans-serif;
     scroll-behavior: smooth;
   }
+
+  ::-webkit-scrollbar {
+    @apply h-3 w-3;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-gray-200;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-gray-300;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-gray-400;
+  }
 }
 
 @layer components {
   .nav-link {
-    @apply rounded-lg border-2 border-primary p-2 text-center tracking-wide text-primary md:border-none md:p-0 md:text-left md:text-black;
+    @apply rounded-lg border-2 border-primary p-2 text-center tracking-wide text-primary md:min-w-fit md:border-none md:p-0 md:text-left md:text-black;
   }
 
   .service-wrapper {
