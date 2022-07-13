@@ -1,4 +1,5 @@
 import HeaderSVG from '../../assets/svg/header-svg.svg'
+import Button from './Button'
 
 export default function Header() {
   return (
@@ -17,12 +18,8 @@ export default function Header() {
               dolore?
             </p>
             <div className='mt-2 flex items-center justify-center gap-4 md:justify-start'>
-              <a href='#' className='rounded-xl border border-primary bg-primary px-4 py-2 tracking-wide text-white transition duration-300 hover:shadow-lg hover:shadow-primary/50'>
-                Get Started
-              </a>
-              <a href='#' className='rounded-xl border-2 border-primary px-4 py-2 tracking-wide text-primary transition duration-300 hover:shadow-lg hover:shadow-gray-800/50'>
-                Learn More
-              </a>
+              <Button className={'bg-primary text-white hover:shadow-primary/50'} href={'#'} text={'Get Started'} />
+              <Button className={'bg-white text-primary hover:shadow-gray-800/50'} href={'#'} text={'Learn More'} />
             </div>
           </div>
         </div>
