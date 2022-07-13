@@ -5,6 +5,7 @@ import Header from './components/Header'
 import Navbar from './components/Navbar'
 import Prices from './components/Prices'
 import Service from './components/Service'
+import Testimonials from './components/Testimonials'
 import WhyUs from './components/WhyUs'
 
 export default function App() {
@@ -17,6 +18,7 @@ export default function App() {
         <WhyUs />
         <Service />
         <Prices />
+        <Testimonials />
         <Contact />
       </main>
       <Footer />
