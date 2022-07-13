@@ -28,16 +28,16 @@ export default function Navbar() {
                 <li className='nav-link'>
                   <a href='#home'>Home</a>
                 </li>
-                <li className='rounded-lg border-2 border-primary p-2 text-center tracking-wide text-primary md:border-none md:p-0 md:text-left md:text-black'>
+                <li className='nav-link'>
                   <a href='#why-us'>Why Us?</a>
                 </li>
-                <li className='rounded-lg border-2 border-primary p-2 text-center tracking-wide text-primary md:border-none md:p-0 md:text-left md:text-black'>
+                <li className='nav-link'>
                   <a href='#services'>Services</a>
                 </li>
-                <li className='rounded-lg border-2 border-primary p-2 text-center tracking-wide text-primary md:border-none md:p-0 md:text-left md:text-black'>
+                <li className='nav-link'>
                   <a href='#prices'>Prices</a>
                 </li>
-                <li className='rounded-lg border-2 border-primary p-2 text-center tracking-wide text-primary md:border-none md:p-0 md:text-left md:text-black'>
+                <li className='nav-link'>
                   <a href='#contact'>Contact</a>
                 </li>
               </ul>
