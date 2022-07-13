@@ -1,5 +1,7 @@
 import { MenuAlt1Icon, XIcon } from '@heroicons/react/outline'
 import { useState } from 'react'
+import Button from './Button'
+import NavLink from './NavLink'
 
 export default function Navbar() {
   const [showMenu, setShowMenu] = useState(false)
@@ -25,32 +27,16 @@ export default function Navbar() {
                 <XIcon className='w-8 rotate-180 text-primary' onClick={handleCloseMenu} />
               </div>
               <ul className='flex flex-col gap-4 md:flex-row md:justify-between'>
-                <li className='nav-link'>
-                  <a href='#home'>Home</a>
-                </li>
-                <li className='nav-link'>
-                  <a href='#why-us'>Why Us?</a>
-                </li>
-                <li className='nav-link'>
-                  <a href='#services'>Services</a>
-                </li>
-                <li className='nav-link'>
-                  <a href='#prices'>Prices</a>
-                </li>
-                <li className='nav-link'>
-                  <a href='#testimonials'>Testimonials</a>
-                </li>
-                <li className='nav-link'>
-                  <a href='#contact'>Contact</a>
-                </li>
+                <NavLink href={'#home'} text={'Home'} />
+                <NavLink href={'#why-us'} text={'Why Us?'} />
+                <NavLink href={'#services'} text={'Service'} />
+                <NavLink href={'#prices'} text={'Prices'} />
+                <NavLink href={'#testimonials'} text={'Testimonials'} />
+                <NavLink href={'#contact'} text={'Contact'} />
               </ul>
               <div className='mt-16 flex flex-col gap-4 md:hidden'>
-                <a className='w-full rounded-lg border-2 border-primary bg-primary p-2 text-center tracking-wide text-white' href='#'>
-                  Get Started
-                </a>
-                <a className='w-full rounded-lg border-2 border-primary bg-white p-2 text-center tracking-wide text-primary' href='#'>
-                  Learn More
-                </a>
+                <Button className={'bg-primary text-white'} href={'#'} text={'Get Started'} />
+                <Button className={'bg-white text-primary'} href={'#'} text={'Learn More'} />
               </div>
             </div>
           </div>
