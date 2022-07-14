@@ -1,5 +1,8 @@
 import { PaperAirplaneIcon } from '@heroicons/react/outline'
 import ContactSVG from '../../assets/svg/contact-svg.svg'
+import InputForm from './InputForm'
+import InputWrapper from './InputWrapper'
+import TextareaForm from './TextareaForm'
 
 export default function Contact() {
   return (
@@ -20,29 +23,15 @@ export default function Contact() {
             </div>
             <div className='w-full rounded-lg'>
               <form className='p-4'>
-                <div className='mb-3'>
-                  <label className='mb-1 block font-semibold tracking-wide' htmlFor='name'>
-                    Name
-                  </label>
-                  <input className='w-full rounded border border-white bg-primary py-1 px-2 tracking-wide text-white transition duration-300 focus:bg-white focus:text-black focus:outline-primary' type='text' name='name' id='name' />
-                </div>
-                <div className='mb-3'>
-                  <label className='font mb-1 block font-semibold tracking-wide' htmlFor='email'>
-                    Email
-                  </label>
-                  <input className='w-full rounded border border-white bg-primary py-1 px-2 tracking-wide text-white transition duration-300 focus:bg-white focus:text-black focus:outline-primary' type='email' name='email' id='email' />
-                </div>
-                <div className='mb-3'>
-                  <label className='mb-1 block font-semibold tracking-wide' htmlFor='message'>
-                    Message
-                  </label>
-                  <textarea
-                    className='w-full resize-none rounded border border-white bg-primary py-1 px-2 tracking-wide text-white transition duration-300 focus:bg-white focus:text-black focus:outline-primary'
-                    name='message'
-                    id='message'
-                    rows='10'
-                  ></textarea>
-                </div>
+                <InputWrapper htmlFor={'name'} text={'Name'}>
+                  <InputForm type={'text'} name={'name'} id={'name'} />
+                </InputWrapper>
+                <InputWrapper htmlFor={'email'} text={'Email'}>
+                  <InputForm type={'email'} name={'email'} id={'email'} />
+                </InputWrapper>
+                <InputWrapper htmlFor={'message'} text={'Message'}>
+                  <TextareaForm name={'message'} id={'message'} />
+                </InputWrapper>
                 <button className='ml-auto block rounded-lg border-2 border-white bg-primary px-6 py-2 text-white transition duration-300 hover:bg-white hover:text-primary' type='button'>
                   <PaperAirplaneIcon className='h-6 w-6 rotate-90' />
                 </button>
