@@ -1,0 +1,174 @@
+[
+    {
+        "title": "Beginner",
+        "price": "Free",
+        "benefits": [
+            {
+                "name": "Support Avaliable 24/7",
+                "available": true
+            },
+            {
+                "name": "1 Real World Project",
+                "available": true
+            },
+            {
+                "name": "All Beginner Lessons",
+                "available": true
+            },
+            {
+                "name": "All Junior Lessons",
+                "available": false
+            },
+            {
+                "name": "All Senior Lessons",
+                "available": false
+            },
+            {
+                "name": "All Expert Lessons",
+                "available": false
+            },
+            {
+                "name": "Tips & Tricks",
+                "available": false
+            },
+            {
+                "name": "Get Online Course T-Shirt",
+                "available": false
+            },
+            {
+                "name": "Get Certificate",
+                "available": false
+            }
+        ],
+        "bestSeller": false
+    },
+    {
+        "title": "Junior",
+        "price": "$9",
+        "benefits": [
+            {
+                "name": "Support Avaliable 24/7",
+                "available": true
+            },
+            {
+                "name": "5 Real World Project",
+                "available": true
+            },
+            {
+                "name": "All Beginner Lessons",
+                "available": true
+            },
+            {
+                "name": "All Junior Lessons",
+                "available": true
+            },
+            {
+                "name": "All Senior Lessons",
+                "available": false
+            },
+            {
+                "name": "All Expert Lessons",
+                "available": false
+            },
+            {
+                "name": "Tips & Tricks",
+                "available": false
+            },
+            {
+                "name": "Get Online Course T-Shirt",
+                "available": true
+            },
+            {
+                "name": "Get Certificate",
+                "available": true
+            }
+        ],
+        "bestSeller": false
+    },
+    {
+        "title": "Senior",
+        "price": "$99",
+        "benefits": [
+            {
+                "name": "Support Avaliable 24/7",
+                "available": true
+            },
+            {
+                "name": "15 Real World Project",
+                "available": true
+            },
+            {
+                "name": "All Beginner Lessons",
+                "available": true
+            },
+            {
+                "name": "All Junior Lessons",
+                "available": true
+            },
+            {
+                "name": "All Senior Lessons",
+                "available": true
+            },
+            {
+                "name": "All Expert Lessons",
+                "available": false
+            },
+            {
+                "name": "Tips & Tricks",
+                "available": true
+            },
+            {
+                "name": "Get Online Course T-Shirt",
+                "available": true
+            },
+            {
+                "name": "Get Certificate",
+                "available": true
+            }
+        ],
+        "bestSeller": true
+    },
+    {
+        "title": "Expert",
+        "price": "$499",
+        "benefits": [
+            {
+                "name": "Support Avaliable 24/7",
+                "available": true
+            },
+            {
+                "name": "50 Real World Project",
+                "available": true
+            },
+            {
+                "name": "All Beginner Lessons",
+                "available": true
+            },
+            {
+                "name": "All Junior Lessons",
+                "available": true
+            },
+            {
+                "name": "All Senior Lessons",
+                "available": true
+            },
+            {
+                "name": "All Expert Lessons",
+                "available": true
+            },
+            {
+                "name": "Tips & Tricks",
+                "available": true
+            },
+            {
+                "name": "Get Online Course T-Shirt",
+                "available": true
+            },
+            {
+                "name": "Get Certificate",
+                "available": true
+            }
+        ],
+        "bestSeller": false
+    }
+]
