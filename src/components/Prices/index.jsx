@@ -1,10 +1,24 @@
 import { CheckCircleIcon, XCircleIcon } from '@heroicons/react/outline'
+import { useEffect, useState } from 'react'
 import Button from './Button'
 import Card from './Card'
 import Title from './Title'
 import Wrapper from './Wrapper'
 
 export default function Prices() {
+  const [prices, setPrices] = useState([])
+
+  useEffect(() => {
+    fetchPrices()
+  }, [])
+
+  const fetchPrices = async () => {
+    const res = await fetch('prices.json')
+    const data = await res.json()
+
+    setPrices(data)
+  }
+
   return (
     <>
       <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'>
@@ -18,149 +32,26 @@ export default function Prices() {
         <div className='container mx-auto p-4 md:px-8'>
           <h3 className='mb-4 text-center text-2xl font-semibold tracking-wider md:mb-8 md:text-3xl'>Prices</h3>
           <div className='grid gap-8 md:grid-cols-2 md:gap-6 lg:grid-cols-4'>
-            <Card href={'#'}>
-              <Title>Beginner</Title>
-              <div className='flex flex-col gap-2 py-8'>
-                <Wrapper text={'Support Available 24/7'}>
-                  <CheckCircleIcon className='w-6 text-green-500' />
-                </Wrapper>
-                <Wrapper text={'1 Real World Project'}>
-                  <CheckCircleIcon className='w-6 text-green-500' />
-                </Wrapper>
-                <Wrapper text={'All Beginner Lessons'}>
-                  <CheckCircleIcon className='w-6 text-green-500' />
-                </Wrapper>
-                <Wrapper text={'All Junior Lessons'}>
-                  <XCircleIcon className='w-6 text-red-500' />
-                </Wrapper>
-                <Wrapper text={'All Senior Lessons'}>
-                  <XCircleIcon className='w-6 text-red-500' />
-                </Wrapper>
-                <Wrapper text={'All Expert Lessons'}>
-                  <XCircleIcon className='w-6 text-red-500' />
-                </Wrapper>
-                <Wrapper text={'Tips & Tricks'}>
-                  <XCircleIcon className='w-6 text-red-500' />
-                </Wrapper>
-                <Wrapper text={'Get Online Course T-Shirt'}>
-                  <XCircleIcon className='w-6 text-red-500' />
-                </Wrapper>
-                <Wrapper text={'Get Certificate'}>
-                  <XCircleIcon className='w-6 text-red-500' />
-                </Wrapper>
-              </div>
-              <div className='mt-4 flex items-center justify-center'>
-                <Button href={'#'}>Free</Button>
-              </div>
-            </Card>
-            <Card href={'#'}>
-              <Title>Junior</Title>
-              <div className='flex flex-col gap-2 py-8'>
-                <Wrapper text={'Support Available 24/7'}>
-                  <CheckCircleIcon className='w-6 text-green-500' />
-                </Wrapper>
-                <Wrapper text={'5 Real World Project'}>
-                  <CheckCircleIcon className='w-6 text-green-500' />
-                </Wrapper>
-                <Wrapper text={'All Beginner Lessons'}>
-                  <CheckCircleIcon className='w-6 text-green-500' />
-                </Wrapper>
-                <Wrapper text={'All Junior Lessons'}>
-                  <CheckCircleIcon className='w-6 text-green-500' />
-                </Wrapper>
-                <Wrapper text={'All Senior Lessons'}>
-                  <XCircleIcon className='w-6 text-red-500' />
-                </Wrapper>
-                <Wrapper text={'All Expert Lessons'}>
-                  <XCircleIcon className='w-6 text-red-500' />
-                </Wrapper>
-                <Wrapper text={'Tips & Tricks'}>
-                  <XCircleIcon className='w-6 text-red-500' />
-                </Wrapper>
-                <Wrapper text={'Get Online Course T-Shirt'}>
-                  <CheckCircleIcon className='w-6 text-green-500' />
-                </Wrapper>
-                <Wrapper text={'Get Certificate'}>
-                  <CheckCircleIcon className='w-6 text-green-500' />
-                </Wrapper>
-              </div>
-              <div className='mt-4 flex items-center justify-center'>
-                <Button href={'#'}>$9</Button>
-              </div>
-            </Card>
-            <Card href={'#'}>
-              <div className='absolute -top-3 -right-3 flex h-16 w-16 animate-bounce items-center justify-center rounded-full border-2 border-white bg-primary p-2'>
-                <span className='rotate-12 text-center text-sm tracking-wide text-white'>Best Seller</span>
-              </div>
-              <Title>Senior</Title>
-              <div className='flex flex-col gap-2 py-8'>
-                <Wrapper text={'Support Available 24/7'}>
-                  <CheckCircleIcon className='w-6 text-green-500' />
-                </Wrapper>
-                <Wrapper text={'15 Real World Project'}>
-                  <CheckCircleIcon className='w-6 text-green-500' />
-                </Wrapper>
-                <Wrapper text={'All Beginner Lessons'}>
-                  <CheckCircleIcon className='w-6 text-green-500' />
-                </Wrapper>
-                <Wrapper text={'All Junior Lessons'}>
-                  <CheckCircleIcon className='w-6 text-green-500' />
-                </Wrapper>
-                <Wrapper text={'All Senior Lessons'}>
-                  <CheckCircleIcon className='w-6 text-green-500' />
-                </Wrapper>
-                <Wrapper text={'All Expert Lessons'}>
-                  <XCircleIcon className='w-6 text-red-500' />
-                </Wrapper>
-                <Wrapper text={'Tips & Tricks'}>
-                  <CheckCircleIcon className='w-6 text-green-500' />
-                </Wrapper>
-                <Wrapper text={'Get Online Course T-Shirt'}>
-                  <CheckCircleIcon className='w-6 text-green-500' />
-                </Wrapper>
-                <Wrapper text={'Get Certificate'}>
-                  <CheckCircleIcon className='w-6 text-green-500' />
-                </Wrapper>
-              </div>
-              <div className='mt-4 flex items-center justify-center'>
-                <Button href={'#'}>$99</Button>
-              </div>
-            </Card>
-            <Card href={'#'}>
-              <Title>Expert</Title>
-              <div className='flex flex-col gap-2 py-8'>
-                <Wrapper text={'Support Available 24/7'}>
-                  <CheckCircleIcon className='w-6 text-green-500' />
-                </Wrapper>
-                <Wrapper text={'50 Real World Project'}>
-                  <CheckCircleIcon className='w-6 text-green-500' />
-                </Wrapper>
-                <Wrapper text={'All Beginner Lessons'}>
-                  <CheckCircleIcon className='w-6 text-green-500' />
-                </Wrapper>
-                <Wrapper text={'All Junior Lessons'}>
-                  <CheckCircleIcon className='w-6 text-green-500' />
-                </Wrapper>
-                <Wrapper text={'All Senior Lessons'}>
-                  <CheckCircleIcon className='w-6 text-green-500' />
-                </Wrapper>
-                <Wrapper text={'All Expert Lessons'}>
-                  <CheckCircleIcon className='w-6 text-green-500' />
-                </Wrapper>
-                <Wrapper text={'Tips & Tricks'}>
-                  <CheckCircleIcon className='w-6 text-green-500' />
-                </Wrapper>
-                <Wrapper text={'Get Online Course T-Shirt'}>
-                  <CheckCircleIcon className='w-6 text-green-500' />
-                </Wrapper>
-                <Wrapper text={'Get Certificate'}>
-                  <CheckCircleIcon className='w-6 text-green-500' />
-                </Wrapper>
-              </div>
-              <div className='mt-4 flex items-center justify-center'>
-                <Button href={'#'}>$499</Button>
-              </div>
-            </Card>
+            {prices.map((price, i) => (
+              <Card href={'#'} key={i}>
+                {price.bestSeller && (
+                  <div className='absolute -top-3 -right-3 flex h-16 w-16 animate-bounce items-center justify-center rounded-full border-2 border-white bg-primary p-2'>
+                    <span className='rotate-12 text-center text-sm tracking-wide text-white'>Best Seller</span>
+                  </div>
+                )}
+                <Title>{price.title}</Title>
+                <div className='flex flex-col gap-2 py-8'>
+                  {price.benefits.map((benefit, i) => (
+                    <Wrapper text={benefit.name} key={i}>
+                      {benefit.available ? <CheckCircleIcon className='w-6 text-green-500' /> : <XCircleIcon className='w-6 text-green-500' />}
+                    </Wrapper>
+                  ))}
+                </div>
+                <div className='mt-4 flex items-center justify-center'>
+                  <Button href={'#'}>{price.price}</Button>
+                </div>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
