@@ -29,7 +29,7 @@
 
 @layer components {
   .nav-link {
-    @apply rounded-lg border-2 border-primary p-2 text-center tracking-wide text-primary md:min-w-fit md:border-none md:p-0 md:text-left md:text-black;
+    @apply cursor-pointer rounded-lg border-2 border-primary p-2 text-center tracking-wide text-primary md:min-w-fit md:border-none md:p-0 md:text-left md:text-black;
   }
 
   .service-wrapper {
