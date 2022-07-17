@@ -1,0 +1,32 @@
+[
+    {
+        "name": "ATM Bersama",
+        "slug": "atm-bersama",
+        "img": "/img/payments/payment-atm-bersama.png"
+    },
+    {
+        "name": "QRIS",
+        "slug": "qris",
+        "img": "/img/payments/payment-qris.png"
+    },
+    {
+        "name": "OVO",
+        "slug": "ovo",
+        "img": "/img/payments/payment-ovo.png"
+    },
+    {
+        "name": "DANA",
+        "slug": "dana",
+        "img": "/img/payments/payment-dana.png"
+    },
+    {
+        "name": "GOPAY",
+        "slug": "gopay",
+        "img": "/img/payments/payment-gopay.png"
+    },
+    {
+        "name": "ShopeePay",
+        "slug": "shopeepay",
+        "img": "/img/payments/payment-shopeepay.png"
+    }
+]
