@@ -1,10 +1,13 @@
 import { MenuAlt1Icon, XIcon } from '@heroicons/react/outline'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+import { Link, useLocation } from 'react-router-dom'
+import { Link as LinkScroll } from 'react-scroll'
 import Button from './Button'
-import NavLink from './NavLink'
 
 export default function Navbar() {
   const [showMenu, setShowMenu] = useState(false)
+  const [pathname, setPathname] = useState('')
+  const location = useLocation()
 
   const handleShowMenu = () => {
     setShowMenu(true)
@@ -13,6 +16,10 @@ export default function Navbar() {
   const handleCloseMenu = () => {
     setShowMenu(false)
   }
+
+  useEffect(() => {
+    setPathname(window.location.pathname.split('/').at(1))
+  }, [location])
 
   return (
     <nav className='fixed top-0 z-50 w-full bg-white shadow-md'>
@@ -27,12 +34,28 @@ export default function Navbar() {
                 <XIcon className='w-8 rotate-180 text-primary' onClick={handleCloseMenu} />
               </div>
               <ul className='flex flex-col gap-4 md:flex-row md:justify-between'>
-                <NavLink href={'#home'} text={'Home'} />
-                <NavLink href={'#why-us'} text={'Why Us?'} />
-                <NavLink href={'#services'} text={'Service'} />
-                <NavLink href={'#prices'} text={'Prices'} />
-                <NavLink href={'#testimonials'} text={'Testimonials'} />
-                <NavLink href={'#contact'} text={'Contact'} />
+                <Link className='nav-link' to={'/'}>
+                  Home
+                </Link>
+                {pathname !== 'payment' && (
+                  <>
+                    <LinkScroll className='nav-link' to={'why-us'} smooth={true} duration={300} offset={-100}>
+                      Why Us?
+                    </LinkScroll>
+                    <LinkScroll className='nav-link' to={'services'} smooth={true} duration={300} offset={-100}>
+                      Services
+                    </LinkScroll>
+                    <LinkScroll className='nav-link' to={'prices'} smooth={true} duration={300} offset={-100}>
+                      Prices
+                    </LinkScroll>
+                    <LinkScroll className='nav-link' to={'testimonials'} smooth={true} duration={300} offset={-100}>
+                      Testimonials
+                    </LinkScroll>
+                    <LinkScroll className='nav-link' to={'contact'} smooth={true} duration={300} offset={-100}>
+                      Contact
+                    </LinkScroll>
+                  </>
+                )}
               </ul>
               <div className='mt-16 flex flex-col gap-4 md:hidden'>
                 <Button className={'bg-primary text-white'} href={'#'} text={'Get Started'} />

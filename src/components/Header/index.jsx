@@ -3,7 +3,7 @@ import Button from './Button'
 
 export default function Header() {
   return (
-    <header className='my-16 lg:mt-20' id='home'>
+    <header className='my-16 lg:mt-20' name='home'>
       <div className='container mx-auto p-2 md:px-8'>
         <div className='flex flex-col gap-4 md:flex-row md:gap-8'>
           <div className='flex w-full items-center justify-center md:order-1 md:w-1/2'>

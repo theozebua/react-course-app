@@ -3,7 +3,7 @@ import Wrapper from './Wrapper'
 
 export default function Service() {
   return (
-    <section className='mb-16' id='services'>
+    <section className='mb-16' name='services'>
       <div className='container mx-auto p-4 md:px-8'>
         <h3 className='mb-4 text-center text-2xl font-semibold tracking-wider md:mb-8 md:text-3xl'>Services</h3>
         <div className='grid gap-8 md:grid-cols-2 md:gap-6'>

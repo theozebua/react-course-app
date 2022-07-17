@@ -10,7 +10,7 @@ export default function Contact() {
   return (
     <>
       <object data={WavesUp} type='image/svg+xml'></object>
-      <section className='bg-primary text-white' id='contact'>
+      <section className='bg-primary text-white' name='contact'>
         <div className='container mx-auto p-4 md:px-8'>
           <h3 className='mb-4 text-center text-2xl font-semibold tracking-wider md:mb-8 md:text-3xl'>Contact</h3>
           <div className='flex flex-col gap-4 md:flex-row md:gap-8'>

@@ -1,27 +1,25 @@
-import Contact from './components/Contact'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Fab from './components/Fab'
 import Footer from './components/Footer'
-import Header from './components/Header'
 import Navbar from './components/Navbar'
-import Prices from './components/Prices'
-import Service from './components/Service'
-import Testimonials from './components/Testimonials'
-import WhyUs from './components/WhyUs'
+import ScrollToTop from './components/ScrollToTop'
+import Home from './pages/Home'
+import Payment from './pages/Payment'
 
 export default function App() {
   return (
     <>
-      <Navbar />
-      <Fab />
-      <Header />
-      <main>
-        <WhyUs />
-        <Service />
-        <Prices />
-        <Testimonials />
-        <Contact />
-      </main>
-      <Footer />
+      <Router>
+        <Navbar />
+        <Fab />
+        <ScrollToTop>
+          <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/payment/:type' element={<Payment />} />
+          </Routes>
+        </ScrollToTop>
+        <Footer />
+      </Router>
     </>
   )
 }

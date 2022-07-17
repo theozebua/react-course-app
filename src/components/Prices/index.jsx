@@ -15,7 +15,7 @@ export default function Prices() {
   }, [])
 
   const fetchPrices = async () => {
-    const res = await fetch('prices.json')
+    const res = await fetch('/prices.json')
     const data = await res.json()
 
     setPrices(data)
@@ -24,12 +24,12 @@ export default function Prices() {
   return (
     <>
       <object data={WavesUp} type='image/svg+xml'></object>
-      <section className='bg-primary text-white' id='prices'>
+      <section className='bg-primary text-white' name='prices'>
         <div className='container mx-auto p-4 md:px-8'>
           <h3 className='mb-4 text-center text-2xl font-semibold tracking-wider md:mb-8 md:text-3xl'>Prices</h3>
           <div className='grid gap-8 md:grid-cols-2 md:gap-6 lg:grid-cols-4'>
             {prices.map((price, i) => (
-              <Card href={'#'} key={i}>
+              <Card href={`/payment/${price.type}`} key={i}>
                 {price.bestSeller && (
                   <div className='absolute -top-3 -right-3 flex h-16 w-16 animate-bounce items-center justify-center rounded-full border-2 border-white bg-primary p-2'>
                     <span className='rotate-12 text-center text-sm tracking-wide text-white'>Best Seller</span>
@@ -44,7 +44,7 @@ export default function Prices() {
                   ))}
                 </div>
                 <div className='mt-4 flex items-center justify-center'>
-                  <Button href={'#'}>{price.price}</Button>
+                  <Button price={price.price} />
                 </div>
               </Card>
             ))}

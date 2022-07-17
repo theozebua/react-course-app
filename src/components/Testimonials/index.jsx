@@ -20,7 +20,7 @@ export default function Testimonials() {
   }
 
   return (
-    <section id='testimonials'>
+    <section name='testimonials'>
       <div className='container mx-auto p-4 md:px-8'>
         <h3 className='mb-4 text-center text-2xl font-semibold tracking-wider md:mb-8 md:text-3xl'>Testimonials</h3>
         <div className='flex gap-4 overflow-auto pb-4 md:gap-6'>
