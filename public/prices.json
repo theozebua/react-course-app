@@ -1,6 +1,7 @@
 [
     {
         "title": "Beginner",
+        "type": "beginner",
         "price": "Free",
         "benefits": [
             {
@@ -44,6 +45,7 @@
     },
     {
         "title": "Junior",
+        "type": "junior",
         "price": "$9",
         "benefits": [
             {
@@ -87,6 +89,7 @@
     },
     {
         "title": "Senior",
+        "type": "senior",
         "price": "$99",
         "benefits": [
             {
@@ -130,6 +133,7 @@
     },
     {
         "title": "Expert",
+        "type": "expert",
         "price": "$499",
         "benefits": [
             {
