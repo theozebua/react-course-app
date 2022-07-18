@@ -1,4 +1,7 @@
+import { useEffect } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 import Fab from './components/Fab'
 import Footer from './components/Footer'
 import Navbar from './components/Navbar'
@@ -7,6 +10,11 @@ import Home from './pages/Home'
 import Payment from './pages/Payment'
 
 export default function App() {
+  useEffect(() => {
+    AOS.init()
+    AOS.refresh()
+  }, [])
+
   return (
     <>
       <Router>
