@@ -31,27 +31,27 @@ export default function Navbar() {
             <div className='container mx-auto p-2 md:px-8'>
               <div className='mb-8 flex items-center justify-between md:hidden'>
                 <h3 className='text-2xl font-semibold tracking-wider text-primary'>Online Course</h3>
-                <XIcon className='w-8 rotate-180 text-primary' onClick={handleCloseMenu} />
+                <XIcon onClick={handleCloseMenu} className='w-8 rotate-180 text-primary' />
               </div>
               <ul className='flex flex-col gap-4 md:flex-row md:justify-between'>
-                <Link className='nav-link' to={'/'}>
+                <Link onClick={handleCloseMenu} className='nav-link' to={'/'}>
                   Home
                 </Link>
                 {pathname !== 'payment' && (
                   <>
-                    <LinkScroll className='nav-link' to={'why-us'} smooth={true} duration={300} offset={-100}>
+                    <LinkScroll onClick={handleCloseMenu} className='nav-link' to={'why-us'} smooth={true} duration={300} offset={-100}>
                       Why Us?
                     </LinkScroll>
-                    <LinkScroll className='nav-link' to={'services'} smooth={true} duration={300} offset={-100}>
+                    <LinkScroll onClick={handleCloseMenu} className='nav-link' to={'services'} smooth={true} duration={300} offset={-100}>
                       Services
                     </LinkScroll>
-                    <LinkScroll className='nav-link' to={'prices'} smooth={true} duration={300} offset={-100}>
+                    <LinkScroll onClick={handleCloseMenu} className='nav-link' to={'prices'} smooth={true} duration={300} offset={-100}>
                       Prices
                     </LinkScroll>
-                    <LinkScroll className='nav-link' to={'testimonials'} smooth={true} duration={300} offset={-100}>
+                    <LinkScroll onClick={handleCloseMenu} className='nav-link' to={'testimonials'} smooth={true} duration={300} offset={-100}>
                       Testimonials
                     </LinkScroll>
-                    <LinkScroll className='nav-link' to={'contact'} smooth={true} duration={300} offset={-100}>
+                    <LinkScroll onClick={handleCloseMenu} className='nav-link' to={'contact'} smooth={true} duration={300} offset={-100}>
                       Contact
                     </LinkScroll>
                   </>
