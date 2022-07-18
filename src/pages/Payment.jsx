@@ -31,12 +31,14 @@ export default function Payment() {
   return (
     <section className='my-16' id='payment'>
       <div className='container mx-auto p-4 md:px-8'>
-        <h3 className='mb-4 text-center text-2xl font-semibold tracking-wider md:mb-8 md:text-3xl'>Payment</h3>
+        <h3 className='mb-4 text-center text-2xl font-semibold tracking-wider md:mb-8 md:text-3xl' data-aos={'fade-up'} data-aos-duration={1000} data-aos-offset={300}>
+          Payment
+        </h3>
         <div className='flex flex-col gap-4 md:gap-8 lg:flex-row'>
-          <div className='flex w-full items-center justify-center lg:w-1/2'>
+          <div className='flex w-full items-center justify-center lg:w-1/2' data-aos={'fade-right'} data-aos-duration={1000} data-aos-offset={300} data-aos-delay={500}>
             <object className='w-full md:w-1/2 lg:w-full' data={PaymentSVG} type='image/svg+xml'></object>
           </div>
-          <form className='flex w-full flex-col rounded-lg bg-primary px-4 py-6 text-white'>
+          <form className='flex w-full flex-col rounded-lg bg-primary px-4 py-6 text-white' data-aos={'fade-left'} data-aos-duration={1000} data-aos-offset={300} data-aos-delay={500}>
             <div className='flex flex-col'>
               <h5 className='mb-4 text-center text-xl tracking-wider'>{price.title} Class</h5>
               <div className='mb-4 grid gap-4 md:grid-cols-2 md:gap-6'>
