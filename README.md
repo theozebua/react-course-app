@@ -31,6 +31,10 @@ Start the server
   npm run start
 ```
 
+## Demo
+
+https://react-course-app.vercel.app/
+
 ## License
 
 [MIT](https://github.com/theozebua/react-course-app/blob/main/LICENSE)
