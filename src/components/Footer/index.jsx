@@ -48,13 +48,13 @@ export default function Footer() {
               <h6 className='text-lg font-semibold tracking-wider'>Sponsor</h6>
               <ul>
                 <li>
-                  <a href='#'>Google</a>
+                  <a href='https://www.google.com'>Google</a>
                 </li>
                 <li>
-                  <a href='#'>Facebook</a>
+                  <a href='https://www.facebook.com'>Facebook</a>
                 </li>
                 <li>
-                  <a href='#'>Twitter</a>
+                  <a href='https://www.twitter.com'>Twitter</a>
                 </li>
               </ul>
             </div>
@@ -62,13 +62,13 @@ export default function Footer() {
               <h6 className='text-lg font-semibold tracking-wider'>Partner</h6>
               <ul>
                 <li>
-                  <a href='#'>Google</a>
+                  <a href='https://www.google.com'>Google</a>
                 </li>
                 <li>
-                  <a href='#'>Facebook</a>
+                  <a href='https://www.facebook.com'>Facebook</a>
                 </li>
                 <li>
-                  <a href='#'>Twitter</a>
+                  <a href='https://www.twitter.com'>Twitter</a>
                 </li>
               </ul>
             </div>
