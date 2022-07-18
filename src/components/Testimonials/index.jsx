@@ -22,10 +22,12 @@ export default function Testimonials() {
   return (
     <section name='testimonials'>
       <div className='container mx-auto p-4 md:px-8'>
-        <h3 className='mb-4 text-center text-2xl font-semibold tracking-wider md:mb-8 md:text-3xl'>Testimonials</h3>
+        <h3 className='mb-4 text-center text-2xl font-semibold tracking-wider md:mb-8 md:text-3xl' data-aos={'fade-up'} data-aos-duration={1000} data-aos-offset={300}>
+          Testimonials
+        </h3>
         <div className='flex gap-4 overflow-auto pb-4 md:gap-6'>
-          {users.map((user) => (
-            <div className='flex min-w-[200px] flex-col items-center justify-center gap-4' key={user.login.uuid}>
+          {users.map((user, i) => (
+            <div className='flex min-w-[200px] flex-col items-center justify-center gap-4' key={user.login.uuid} data-aos={'fade-left'} data-aos-duration={1000} data-aos-delay={500 + i * 300} data-aos-offset={300}>
               <div className='w-24 overflow-hidden rounded-full'>
                 <img src={user.picture.large} alt='Random Profile Picture' />
               </div>

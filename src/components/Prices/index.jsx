@@ -26,12 +26,20 @@ export default function Prices() {
       <object data={WavesUp} type='image/svg+xml'></object>
       <section className='bg-primary text-white' name='prices'>
         <div className='container mx-auto p-4 md:px-8'>
-          <h3 className='mb-4 text-center text-2xl font-semibold tracking-wider md:mb-8 md:text-3xl'>Prices</h3>
+          <h3 className='mb-4 text-center text-2xl font-semibold tracking-wider md:mb-8 md:text-3xl' data-aos={'fade-up'} data-aos-duration={1000} data-aos-offset={300}>
+            Prices
+          </h3>
           <div className='grid gap-8 md:grid-cols-2 md:gap-6 lg:grid-cols-4'>
             {prices.map((price, i) => (
-              <Card href={`/payment/${price.type}`} key={i}>
+              <Card href={`/payment/${price.type}`} key={i} delayAos={500 + i * 300}>
                 {price.bestSeller && (
-                  <div className='absolute -top-3 -right-3 flex h-16 w-16 animate-bounce items-center justify-center rounded-full border-2 border-white bg-primary p-2'>
+                  <div
+                    className='absolute -top-3 -right-3 flex h-16 w-16 animate-bounce items-center justify-center rounded-full border-2 border-white bg-primary p-2'
+                    data-aos={'fade-up'}
+                    data-aos-duration={1000}
+                    data-aos-delay={2000}
+                    data-aos-offset={300}
+                  >
                     <span className='rotate-12 text-center text-sm tracking-wide text-white'>Best Seller</span>
                   </div>
                 )}

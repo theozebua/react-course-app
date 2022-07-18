@@ -12,12 +12,14 @@ export default function Contact() {
       <object data={WavesUp} type='image/svg+xml'></object>
       <section className='bg-primary text-white' name='contact'>
         <div className='container mx-auto p-4 md:px-8'>
-          <h3 className='mb-4 text-center text-2xl font-semibold tracking-wider md:mb-8 md:text-3xl'>Contact</h3>
+          <h3 className='mb-4 text-center text-2xl font-semibold tracking-wider md:mb-8 md:text-3xl' data-aos={'fade-up'} data-aos-duration={1000} data-aos-offset={300}>
+            Contact
+          </h3>
           <div className='flex flex-col gap-4 md:flex-row md:gap-8'>
-            <div className='flex w-full items-center justify-center'>
-              <img src={ContactSVG} alt='Contact SVG' />
+            <div className='flex w-full items-center justify-center' data-aos={'fade-right'} data-aos-duration={1000} data-aos-offset={300} data-aos-delay={500}>
+              <img src={ContactSVG} alt='Contact SVG' style={{ transform: 'rotateY(180deg)' }} />
             </div>
-            <div className='w-full rounded-lg'>
+            <div className='w-full rounded-lg' data-aos={'fade-left'} data-aos-duration={1000} data-aos-offset={300} data-aos-delay={500}>
               <form className='p-4'>
                 <InputWrapper htmlFor={'name'} text={'Name'}>
                   <InputForm type={'text'} name={'name'} id={'name'} />
